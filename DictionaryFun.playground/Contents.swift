@@ -13,14 +13,18 @@
  ### 1. Given the following states, New York, Ohio, Florida, Georgia and Kentucky, create a dictionary which stores these states along with their capitals. The capitals of these states are as follows (in the correct order), Albany, Columbus, Tallahassee, Atlanta, and Frankfort.
  */
 // write your code here
-
+var usaStates = ["New York": "Albany",
+                 "Ohio": "Columbus",
+                 "Florida": "Tallahassee",
+                 "Georgia": "Atlanta",
+                 "Kentucky": "Frankfort"]
 
 
 
 /*: question2
  ### 2. What is the type of the dictionary you created in Question 1?
  */
-
+// mutable type
 
 
 
@@ -28,7 +32,8 @@
  ### 3. Create a variable called `capital` and assign to it Florida's capital from the dictionary.
  */
 // write your code here
-
+var capital = usaStates["Florida"]
+print(capital)
 
 
 
@@ -36,7 +41,9 @@
  ### 4. Unwrap `capital` and print out the message "The capital of Florida is <Capital>" to the console.
  */
 // write your code here
-
+if let capital = capital {
+    print("The capital of Florida is \(capital)")
+}
 
 
 
@@ -44,7 +51,7 @@
  ### 5. Create a variable called `anotherCapital` and assign to it the value of Pennsylvania's capital from the dictionary.
  */
 // write your code here
-
+var anotherCapitale = usaStates["Pennsylvania"]
 
 
 
@@ -52,7 +59,11 @@
  ### 6. Unwrap `anotherCapital` and print out the message "I don't know Pennsylvania's capital" to the console.
  */
 // write your code here
-
+if let anotherCapitale = anotherCapitale {
+    print("Cool")
+} else {
+    print("I dont know Pennsylvania's capitale")
+}
 
 
 
@@ -61,7 +72,7 @@
  */
 // write your code here
 
-
+usaStates["Pennsylvania"] = "Harrisburg"
 
 
 /*: question8
@@ -69,7 +80,10 @@
  */
 // write your code here
 
-
+var newSatate = usaStates["Pennsylvania"]
+if let newState = newSatate {
+    print("Pennsylvania's capital is \(newState)")
+}
 
 
 /*: question9
@@ -77,7 +91,8 @@
  */
 // write your code here
 
-
+usaStates["Pennsylvania"] = nil
+print(usaStates)
 
 
 /*: question10
@@ -85,6 +100,7 @@
  */
 let state = "New York"
 // write your code here
+print("The capital of \(state) is \(usaStates["New York"]!)")
 
 
 
@@ -101,13 +117,16 @@ let state = "New York"
  */
 // write your code here
 
-
+var musicBand = ["Nirvana": "Kurt Cobain, Krist Novoselic, Dave Grohl",
+                 "The Beatles": "John Lennon, George Harrison, Paul McCartney, Ringo Starr",
+                 "The Breeders": "Kim Deal, Kelley Deal, Josephine Wiggs, Jim Macpherson",
+                 "Pixies": "Frank Black, Joey Santiago, Kim Deal, David Lovering"]
 
 
 /*: question12
  ### 12. What is the type of the dictionary you created in Question 11?
  */
-
+//string : string
 
 
 
@@ -117,6 +136,8 @@ let state = "New York"
 let bandName = "Pixies"
 // write your code here
 
+
+    print("The list of \(bandName) is \(musicBand["Pixies"]!)")
 
 
 
